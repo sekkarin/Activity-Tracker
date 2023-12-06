@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { v4 as uuidv4 } from "uuid";
 interface Activity {
   id: string;
   name: string;
@@ -19,11 +20,14 @@ const todosSlice = createSlice({
       //
       console.log(action.payload);
 
-      state.activitys.push(action.payload);
+      state.activitys.push({ ...action.payload, id: uuidv4() });
     },
     DELETE_ACTIVITY: (state, action) => {
       console.log(action.payload);
-      state.activitys.filter((activity) => activity.id !== action.payload.id);
+      const newactivitys = state.activitys.filter(
+        (activity) => activity.id !== action.payload.id
+      );
+      state.activitys = newactivitys;
     },
   },
 });
