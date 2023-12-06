@@ -11,7 +11,7 @@ const Workout = () => {
       <AddActivity />
       {activitys.map((activity) => (
         <div key={activity.id} className="text-start gap-2 p-2">
-          <div className="border-2 border-gray-200 p-2 rounded-lg flex justify-between">
+          <div className="border-2 border-gray-200 p-2 rounded-lg flex justify-between hover:bg-slate-100 shadow-md">
             <div>
               <p>Activity : {activity.name}</p>
               <p>Duration : {activity.duration}</p>
