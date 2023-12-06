@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks/redux";
+import { useState } from "react";
+import { useAppDispatch } from "../../hooks/redux";
 import { Button, Input } from "@nextui-org/react";
 import {
   CRAETER_ACTIVITY,

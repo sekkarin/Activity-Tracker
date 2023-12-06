@@ -1,9 +1,6 @@
-import React from "react";
 import { useAppSelector } from "../../hooks/redux";
-import { Button } from "@nextui-org/react";
 import AddActivity from "./AddActivity";
 import DeleteActivity from "./DeleteActivity";
-type Props = {};
 
 const Workout = () => {
   const activitys = useAppSelector((state) => state.acticity.activitys);

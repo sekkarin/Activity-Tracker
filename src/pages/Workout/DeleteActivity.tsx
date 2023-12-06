@@ -1,4 +1,3 @@
-import React from "react";
 import { useAppDispatch } from "../../hooks/redux";
 import { Button } from "@nextui-org/react";
 import { DELETE_ACTIVITY } from "../../features/activitys/acticity";
